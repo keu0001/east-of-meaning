@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>East of Meaning — Dream Interpretation with Eastern Symbolism</title>
+    <meta name="description" content="Explore dream meanings through the calm voice of Eastern symbolism and psychological insight. East of Meaning is a poetic oracle for dreamers around the world.">
+    <meta name="robots" content="index, follow">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Noto+Serif:wght@400;500;600&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/search.js" defer></script>
+    <script src="js/dream-interpreter.js" defer></script>
+    <style>
+        header {
+            text-align: center;
+            margin: 2.5rem 0 1.5rem;
+        }
+        
+        h1 {
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+        }
+        
+        .scroll-indicator {
+            text-align: center;
+            margin: 2rem 0 0.8rem;
+            color: var(--gold);
+            font-size: 1.8rem;
+            opacity: 0.8;
+            cursor: pointer;
+            line-height: 0.8;
+        }
+        
+        .scroll-indicator:hover {
+            opacity: 1;
+        }
+        
+        textarea {
+            width: calc(100% - 140px);
+            height: 50px;
+            background-color: rgba(245, 245, 245, 0.95);
+            border: none;
+            border-radius: 20px;
+            padding: 12px 18px;
+            font-family: 'EB Garamond', 'Noto Serif', serif;
+            font-size: 1.1rem;
+            margin-bottom: 0;
+            resize: none;
+            color: #1a1632;
+            line-height: 1.5;
+            flex-grow: 1;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+        }
+        
+        button {
+            background-color: rgba(212, 175, 55, 0.85);
+            color: #161230;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 15px;
+            font-family: 'EB Garamond', 'Noto Serif', serif;
+            font-size: 1.1rem;
+            cursor: pointer;
+            height: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+            white-space: nowrap;
+        }
+        
+        button:hover {
+            background-color: rgba(212, 175, 55, 0.95);
+            color: #161230;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        button:active {
+            background-color: rgba(212, 175, 55, 1);
+            color: #161230;
+            transform: translateY(0);
+        }
+        
+        /* Chat-style interface for dream interpretation */
+        .chat-container {
+            max-width: 800px;
+            margin: 1.5rem auto 0;
+            border-radius: 20px;
+            background-color: rgba(10, 8, 25, 0.85);
+            overflow: hidden;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        
+        .chat-messages {
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+            min-height: 250px;
+            background-color: transparent;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(212, 175, 55, 0.3) rgba(35, 30, 75, 0.4);
+        }
+        
+        .chat-messages::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .chat-messages::-webkit-scrollbar-track {
+            background: rgba(35, 30, 75, 0.2);
+            border-radius: 10px;
+        }
+        
+        .chat-messages::-webkit-scrollbar-thumb {
+            background-color: rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+        }
+        
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .user-message {
+            justify-content: flex-end;
+        }
+        
+        .sage-message {
+            justify-content: flex-start;
+        }
+        
+        .message-content {
+            padding: 14px 18px;
+            border-radius: 20px;
+            max-width: 80%;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .user-message .message-content {
+            background-color: rgba(212, 175, 55, 0.2);
+            color: rgba(245, 245, 245, 0.98);
+            border-top-right-radius: 6px;
+            margin-right: 8px;
+        }
+        
+        .sage-message .message-content {
+            background-color: rgba(60, 50, 120, 0.6);
+            color: rgba(245, 245, 245, 0.98);
+            border-top-left-radius: 6px;
+            margin-left: 8px;
+        }
+        
+        .message-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .user-avatar {
+            background-color: rgba(212, 175, 55, 0.25);
+        }
+        
+        .sage-avatar {
+            background-color: rgba(85, 75, 140, 0.6);
+        }
+        
+        .dream-input-chat {
+            padding: 15px 20px;
+            background-color: rgba(15, 12, 35, 0.8);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .chat-typing {
+            padding: 10px 20px;
+            color: rgba(245, 245, 245, 0.8);
+            font-style: italic;
+            opacity: 0.8;
+            display: none;
+            text-align: center;
+            background-color: transparent;
+        }
+        
+        /* 隐藏ai-response元素，应该不再需要 */
+        .ai-response {
+            display: none;
+        }
+        
+        .articles {
+            margin: 4rem 0;
+        }
+        
+        .articles h2 {
+            margin-top: 0;
+            font-size: 1.7rem;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .article {
+            display: block; /* Show all visible articles */
+            margin-bottom: 0.7rem;
+            padding-bottom: 0.3em;
+        }
+        
+        .article.hidden {
+            display: none; /* Hide articles not in top 5 */
+        }
+        
+        .article h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--gold);
+        }
+        
+        .article a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        .article a:hover {
+            text-decoration: underline;
+        }
+        
+        .article p {
+            margin: 0.5rem 0 0.5rem;
+            color: var(--off-white);
+            line-height: 1.6;
+            letter-spacing: 0.2px;
+            font-size: 1.15rem;
+            display: inline;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            margin: 0.6em 0;
+            opacity: 0.7;
+        }
+        
+        .read-more {
+            color: var(--gold);
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 0.5rem;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        .return a {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+        
+        .return a:hover {
+            text-decoration: underline;
+            opacity: 0.9;
+        }
+        
+        /* Pagination styles */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+        }
+        
+        .pagination button {
+            background-color: rgba(212, 175, 55, 0.2);
+            color: var(--gold);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            border-radius: 4px;
+            padding: 6px 14px;
+            font-family: 'EB Garamond', 'Noto Serif', serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        .pagination button:hover {
+            background-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .pagination button.active {
+            background-color: rgba(212, 175, 55, 0.5);
+            color: #ffffff;
+        }
+        
+        .pagination-info {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+            margin: 0 0.5rem;
+        }
+        
+        .pagination-numbers {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .all-articles-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .all-articles-link a {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 1.1rem;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .all-articles-link a:hover {
+            background-color: rgba(212, 175, 55, 0.2);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">eastofmeaning</a>
+        <div class="nav-links">
+            <a href="#dream-oracle">INTERPRET</a>
+            <a href="readings.html">READINGS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchBox" placeholder="Search dreams..." autocomplete="off">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <div class="search-results" id="searchResults">
+                <ul class="search-results-list" id="searchResultsList"></ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="dream-oracle" class="container" style="padding: 1.5rem 3rem;">
+        <header>
+            <h1>Welcome to EastOfMeaning —<br>Where the winds of the ancient East meet the quiet language of dreams.</h1>
+        </header>
+        
+        <!-- Chat-style interface for dream interpretation -->
+        <section class="chat-container" style="z-index: 10; position: relative; margin-top: 2rem;">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Initial sage message -->
+                <div class="message sage-message" style="margin-top: 15px;">
+                    <div class="message-avatar sage-avatar">🧙</div>
+                    <div class="message-content">
+                        ✨ Speak your dream below, and let the ancient East listen with you.
+                    </div>
+                </div>
+            </div>
+            <div class="dream-input-chat">
+                <textarea id="dreamText" placeholder="Describe your dream here..."></textarea>
+                <button id="interpretBtn">Interpret my dream</button>
+            </div>
+        </section>
+        
+        <section class="articles" id="writings">
+            <h2>🌙 Selected Writings on Dreams</h2>
+            
+            <div class="article">
+                <h3><a href="journal/recurring.html" target="_blank">• 🔁 Recurring Dreams: Patterns, Messages, and the Soul's Repetition</a></h3>
+                <p>You've had this dream before. Maybe it changes slightly. Maybe not at all. But it returns — again and again — whispering what has not yet been heard. Recurring dreams are not random.</p>
+                <a href="journal/recurring.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/hair-loss.html" target="_blank">• 🧑‍🦲 Dreaming of Losing Hair: Aging, Identity, and Fear of Loss</a></h3>
+                <p>Hair falls. In the sink, on the floor, through your fingers. In a dream, it can feel unsettling, even frightening. But it often speaks to a deeper story — about who you are, and what you fear losing.</p>
+                <a href="journal/hair-loss.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/car-crash.html" target="_blank">• 🚗 Dreaming of a Car Crash: Loss of Control, Impact, and Emotional Reckoning</a></h3>
+                <p>One moment you're driving — the next, impact. Dreams of car crashes are loud, sudden, and unforgettable. But they often reveal more about your inner direction than any real road.</p>
+                <a href="journal/car-crash.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/fire.html" target="_blank">• 🔥 Dreaming of Fire: Transformation, Emotion, and Inner Power</a></h3>
+                <p>Fire in dreams is never quiet. It burns, it spreads, it consumes — or warms, protects, and lights the way. To dream of fire is to confront what is untamed, emotional, and deeply alive within you.</p>
+                <a href="journal/fire.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/exam.html" target="_blank">• 📝 Dreaming of Exams: Pressure, Self-Worth, and Readiness Revealed</a></h3>
+                <p>You walk into a room. The exam has begun. You didn't study. Or you can't find the questions. Or the clock is already running out. To dream of exams is to meet the parts of you still afraid of being measured.</p>
+                <a href="journal/exam.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/pregnancy.html" target="_blank">• 🤰 Dreaming of Pregnancy: Growth, Potential, and Inner Creation</a></h3>
+                <p>To dream of pregnancy is to feel something forming within — slowly, silently, powerfully. It may not be about a child, but about an idea, a transformation, a self yet to be born.</p>
+                <a href="journal/pregnancy.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/wedding.html" target="_blank">• 💍 Dreaming of Weddings: Symbolism of Union, Change, and Emotional Commitment</a></h3>
+                <p>A wedding in a dream is not always about romance. It may not be about a partner at all. Instead, it often represents a transition — a union between old and new selves, or between different aspects of your life.</p>
+                <a href="journal/wedding.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/spider.html" target="_blank">• 🕸️ Dreaming of Spiders: Symbolism, Fear, and Emotional Insight</a></h3>
+                <p>Dreams involving spiders are common and can evoke a range of emotions, from fear to fascination. These dreams often carry deep symbolic meanings, reflecting various aspects of our subconscious mind.</p>
+                <a href="journal/spider.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/naked.html" target="_blank">• 🩶 Why You Keep Dreaming About Being Naked in Public</a></h3>
+                <p>To be naked in a dream — especially in front of others — is to feel exposed. Not just without clothing, but without protection, without performance. In Eastern thought, nudity can symbolize returning to essence.</p>
+                <a href="journal/naked.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/falling.html" target="_blank">• ⬇️ Why You Keep Dreaming About Falling</a></h3>
+                <p>Falling in a dream is sudden, powerless, and unforgettable. It pulls you out of the sky, out of sleep, and sometimes — out of your sense of control.</p>
+                <a href="journal/falling.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/chase.html" target="_blank">• 🏃 Why You Keep Dreaming About Being Chased</a></h3>
+                <p>To be chased in a dream is to feel urgency without direction. Your body runs, your breath shortens, but often — you don't know what you're running from.</p>
+                <a href="journal/chase.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/teeth.html" target="_blank">• 🦷 Why You Keep Dreaming Your Teeth Are Falling Out</a></h3>
+                <p>Teeth falling out in dreams is one of the most searched symbols in the world — and one of the most misunderstood. At first, it feels like loss, decay, or embarrassment.</p>
+                <a href="journal/teeth.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/water.html" target="_blank">• 🌊 Water in Dreams: Emotion, Flow, and Balance</a></h3>
+                <p>Water is one of the most ancient and universal dream symbols. It has no shape of its own — it becomes what contains it. In dreams, water often reflects our inner emotional state.</p>
+                <a href="journal/water.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/ex.html" target="_blank">• 💔 Why You Keep Dreaming About Your Ex</a></h3>
+                <p>An ex in a dream is never just a person — it's a story that never finished writing. These dreams can stir longing, regret, relief, or even guilt. But most of all, they ask: What part of this is still alive in you?</p>
+                <a href="journal/ex.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/snake.html" target="_blank">• 🐍 What Does It Mean to Dream of a Snake?</a></h3>
+                <p>A snake in a dream makes you pause. It moves without sound. It watches. It waits. In Eastern tradition, the snake is not evil. It is a symbol of change, hidden strength, and silent intelligence.</p>
+                <a href="journal/snake.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/flying.html" target="_blank">• 🕊️ Why You Keep Dreaming About Flying</a></h3>
+                <p>Flying in a dream often feels euphoric. There is weightlessness, freedom, a sense of rising above everything. But not all flying dreams are joyful — sometimes they're awkward, shaky, or filled with fear of falling.</p>
+                <a href="journal/flying.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/late.html" target="_blank">• ⏰ Why You Keep Dreaming About Being Late</a></h3>
+                <p>You're rushing. The train is leaving. The meeting has started. The ceremony is over. You're late — and no matter how fast you move, you can't catch up. This dream doesn't mean your schedule is wrong. It often means you fear falling behind in something deeper.</p>
+                <a href="journal/late.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+            
+            <div class="article">
+                <h3><a href="journal/died.html" target="_blank">• 🕯️ Why You Keep Dreaming About Someone Who Has Died</a></h3>
+                <p>Some dreams feel like visitations. You see someone who's no longer here — a loved one, a relative, a figure from your past. They may speak, look at you, embrace you — or simply appear. And when you wake, it lingers: Was that a message? A memory? Or something more?</p>
+                <a href="journal/died.html" target="_blank" class="read-more">[Read more →]</a>
+                <hr>
+            </div>
+        </section>
+    </div>
+    
+    <div class="all-articles-link" style="margin-top: -50px;">
+        <a href="readings.html" target="_blank">View All Dream Writings →</a>
+    </div>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="support">
+                <p>If this insight spoke to you, you may offer me tea 🍵</p>
+                <a href="https://www.buymeacoffee.com/eastofmeaning" class="buymeacoffee">
+                    Buy Me a Tea
+                </a>
+            </div>
+            <div class="contact-area">
+                <p>Want to share a dream or simply speak?<br>
+                Write me anytime: <a href="mailto:eastofmeaning@gmail.com">eastofmeaning@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // 确保DOM加载完成后初始化界面
+        document.addEventListener('DOMContentLoaded', function() {
+            // 确保聊天容器可见
+            document.querySelector('.chat-container').style.display = 'block';
+            
+            // Fix navigation scroll links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Pagination for articles
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all article links in the Selected Writings section
+            const articlesSection = document.getElementById('writings');
+            const articleDivs = articlesSection.querySelectorAll('.article');
+            const articleLinks = articlesSection.querySelectorAll('.article h3 a, .article .read-more');
+            
+            // Initialize click counts from localStorage or set to default values
+            let clickCounts = JSON.parse(localStorage.getItem('articleClickCounts')) || {};
+            
+            // Add click event listeners to all article links
+            articleLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Get the href attribute to identify the article
+                    const href = this.getAttribute('href');
+                    
+                    // Increment click count for this article
+                    clickCounts[href] = (clickCounts[href] || 0) + 1;
+                    
+                    // Save updated click counts to localStorage
+                    localStorage.setItem('articleClickCounts', JSON.stringify(clickCounts));
+                });
+            });
+            
+            // Convert article divs to array for sorting
+            const articlesArray = Array.from(articleDivs);
+            
+            // Sort articles by click count (descending)
+            articlesArray.sort((a, b) => {
+                const aHref = a.querySelector('a').getAttribute('href');
+                const bHref = b.querySelector('a').getAttribute('href');
+                
+                // Default to 0 if no clicks recorded
+                const aClicks = clickCounts[aHref] || 0;
+                const bClicks = clickCounts[bHref] || 0;
+                
+                return bClicks - aClicks; // Descending order
+            });
+            
+            // Remove current articles
+            articleDivs.forEach(div => div.remove());
+            
+            // Append only the top 4 sorted articles back to the container
+            const container = articlesSection.querySelector('h2').parentNode;
+            const maxArticlesToShow = 4;
+            
+            for (let i = 0; i < Math.min(maxArticlesToShow, articlesArray.length); i++) {
+                container.appendChild(articlesArray[i]);
+            }
+        });
+    </script>
+</body>
+</html> 

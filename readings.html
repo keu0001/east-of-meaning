@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Writings — East of Meaning</title>
+    <meta name="description" content="Explore dream interpretations through Eastern symbolism. Our dream writings offer insights into common dream themes and their deeper psychological meanings.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Noto+Serif:wght@400;500;600&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/search.js" defer></script>
+    <style>
+        header {
+            text-align: center;
+            margin: 3rem 0 4rem;
+        }
+        
+        h1 {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+        
+        .subtitle {
+            font-style: italic;
+            color: var(--medium-gray);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+            letter-spacing: 0.2px;
+        }
+        
+        .articles {
+            margin: 2rem 0 5rem;
+            position: relative;
+        }
+        
+        .article {
+            margin-bottom: 2rem;
+        }
+        
+        .article-title {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+        
+        .article-title a {
+            color: var(--gold);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .article-title a:hover {
+            text-decoration: underline;
+        }
+        
+        .article > div {
+            margin-bottom: 0.8rem;
+        }
+        
+        .article-excerpt {
+            font-size: 1.25rem;
+            color: var(--off-white);
+            margin-bottom: 0;
+            line-height: 1.6;
+            letter-spacing: 0.2px;
+            display: inline;
+        }
+        
+        .read-more {
+            color: var(--gold);
+            text-decoration: none;
+            font-style: italic;
+            display: inline;
+            margin-left: 0.5rem;
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid var(--gold);
+            margin: 1.5rem 0;
+        }
+        
+        .return {
+            margin: 5rem 0 3rem;
+            text-align: center;
+            font-style: italic;
+            color: var(--medium-gray);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .return a {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+        
+        .return a:hover {
+            text-decoration: underline;
+            opacity: 0.9;
+        }
+        
+        /* Article display styles */
+        .article {
+            display: block; /* Show all articles */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">eastofmeaning</a>
+        <div class="nav-links">
+            <a href="index.html#dream-oracle">INTERPRET</a>
+            <a href="readings.html">READINGS</a>
+            <a href="index.html#contact">CONTACT</a>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchBox" placeholder="Search dreams..." autocomplete="off">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <div class="search-results" id="searchResults">
+                <ul class="search-results-list" id="searchResultsList"></ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container" style="padding: 1.5rem 3rem;">
+        <header>
+            <h1>Dream Writings</h1>
+            <p class="subtitle">Collected observations on the symbolism and meaning of recurring dream themes, viewed through the lens of Eastern philosophy.</p>
+        </header>
+        
+        <section class="articles">
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/recurring.html" target="_blank">🔁 Recurring Dreams: Patterns, Messages, and the Soul's Repetition</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">You've had this dream before. Maybe it changes slightly. Maybe not at all. But it returns — again and again — whispering what has not yet been heard. Recurring dreams are not random.</p>
+                    <a href="journal/recurring.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/hair-loss.html" target="_blank">🧑‍🦲 Dreaming of Losing Hair: Aging, Identity, and Fear of Loss</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">Hair falls. In the sink, on the floor, through your fingers. In a dream, it can feel unsettling, even frightening. But it often speaks to a deeper story — about who you are, and what you fear losing.</p>
+                    <a href="journal/hair-loss.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/car-crash.html" target="_blank">🚗 Dreaming of a Car Crash: Loss of Control, Impact, and Emotional Reckoning</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">One moment you're driving — the next, impact. Dreams of car crashes are loud, sudden, and unforgettable. But they often reveal more about your inner direction than any real road.</p>
+                    <a href="journal/car-crash.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/fire.html" target="_blank">🔥 Dreaming of Fire: Transformation, Emotion, and Inner Power</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">Fire in dreams is never quiet. It burns, it spreads, it consumes — or warms, protects, and lights the way. To dream of fire is to confront what is untamed, emotional, and deeply alive within you.</p>
+                    <a href="journal/fire.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/exam.html" target="_blank">📝 Dreaming of Exams: Pressure, Self-Worth, and Readiness Revealed</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">You walk into a room. The exam has begun. You didn't study. Or you can't find the questions. Or the clock is already running out. To dream of exams is to meet the parts of you still afraid of being measured.</p>
+                    <a href="journal/exam.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/pregnancy.html" target="_blank">🤰 Dreaming of Pregnancy: Growth, Potential, and Inner Creation</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">To dream of pregnancy is to feel something forming within — slowly, silently, powerfully. It may not be about a child, but about an idea, a transformation, a self yet to be born.</p>
+                    <a href="journal/pregnancy.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/wedding.html" target="_blank">💍 Dreaming of Weddings: Symbolism of Union, Change, and Emotional Commitment</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">A wedding in a dream is not always about romance. It may not be about a partner at all. Instead, it often represents a transition — a union between old and new selves, or between different aspects of your life.</p>
+                    <a href="journal/wedding.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/spider.html" target="_blank">🕸️ Dreaming of Spiders: Symbolism, Fear, and Emotional Insight</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">Dreams involving spiders are common and can evoke a range of emotions, from fear to fascination. These dreams often carry deep symbolic meanings, reflecting various aspects of our subconscious mind.</p>
+                    <a href="journal/spider.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/naked.html" target="_blank">🩶 Why You Keep Dreaming About Being Naked in Public</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">To be naked in a dream — especially in front of others — is to feel exposed. Not just without clothing, but without protection, without performance. In Eastern thought, nudity can symbolize returning to essence.</p>
+                    <a href="journal/naked.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/falling.html" target="_blank">⬇️ Why You Keep Dreaming About Falling</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">Falling in a dream is sudden, powerless, and unforgettable. It pulls you out of the sky, out of sleep, and sometimes — out of your sense of control. In Eastern thought, falling is the body's way of warning imbalance.</p>
+                    <a href="journal/falling.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/chase.html" target="_blank">🏃 Why You Keep Dreaming About Being Chased</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">To be chased in a dream is to feel urgency without direction. Your body runs, your breath shortens, but often — you don't know what you're running from. This is one of the most common dream themes in the world.</p>
+                    <a href="journal/chase.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/teeth.html" target="_blank">🦷 Why You Keep Dreaming Your Teeth Are Falling Out</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">Teeth falling out in dreams is one of the most searched symbols in the world — and one of the most misunderstood. At first, it feels like loss, decay, or embarrassment. But beneath the surface, this dream often reveals much more.</p>
+                    <a href="journal/teeth.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/water.html" target="_blank">🌊 Water in Dreams: Emotion, Flow, and Balance</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">Water is one of the most ancient and universal dream symbols. It has no shape of its own — it becomes what contains it. In dreams, water often reflects our inner emotional state: how we hold, release, resist, or move with what we feel.</p>
+                    <a href="journal/water.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/ex.html" target="_blank">💔 Why You Keep Dreaming About Your Ex</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">An ex in a dream is never just a person — it's a story that never finished writing. These dreams can stir longing, regret, relief, or even guilt. But most of all, they ask: What part of this is still alive in you?</p>
+                    <a href="journal/ex.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/snake.html" target="_blank">🐍 What Does It Mean to Dream of a Snake?</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">A snake in a dream makes you pause. It moves without sound. It watches. It waits. In Eastern tradition, the snake is not evil. It is a symbol of change, hidden strength, and silent intelligence. In dream psychology, it often represents repressed energy or instinct trying to return.</p>
+                    <a href="journal/snake.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/flying.html" target="_blank">🕊️ Why You Keep Dreaming About Flying</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">Flying in a dream often feels euphoric. There is weightlessness, freedom, a sense of rising above everything. But not all flying dreams are joyful — sometimes they're awkward, shaky, or filled with fear of falling.</p>
+                    <a href="journal/flying.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/late.html" target="_blank">⏰ Why You Keep Dreaming About Being Late</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">You're rushing. The train is leaving. The meeting has started. The ceremony is over. You're late — and no matter how fast you move, you can't catch up. This dream doesn't mean your schedule is wrong. It often means you fear falling behind in something deeper.</p>
+                    <a href="journal/late.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+            
+            <article class="article">
+                <h2 class="article-title">
+                    <a href="journal/died.html" target="_blank">🕯️ Why You Keep Dreaming About Someone Who Has Died</a>
+                </h2>
+                <div>
+                    <p class="article-excerpt">Some dreams feel like visitations. You see someone who's no longer here — a loved one, a relative, a figure from your past. They may speak, look at you, embrace you — or simply appear. And when you wake, it lingers: Was that a message? A memory? Or something more?</p>
+                    <a href="journal/died.html" target="_blank" class="read-more">Read the full writing →</a>
+                </div>
+                <hr>
+            </article>
+        </section>
+        
+        <div class="return">
+            <p>May these writings bring clarity to your dream journeys.<br>
+            Wish to explore your own dreams? → <a href="index.html#dream-oracle" target="_blank">Return to the Interpret my dream</a></p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="support">
+                <p>If this insight spoke to you, you may offer me tea 🍵</p>
+                <a href="https://www.buymeacoffee.com/eastofmeaning" class="buymeacoffee">
+                    Buy Me a Tea
+                </a>
+            </div>
+            <div class="contact-area">
+                <p>Want to share a dream or simply speak?<br>
+                Write me anytime: <a href="mailto:eastofmeaning@gmail.com">eastofmeaning@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Search functionality
+        document.getElementById('searchBox').addEventListener('input', performSearch);
+        
+        // Close search results when clicking elsewhere
+        document.addEventListener('click', function(e) {
+            const searchResults = document.getElementById('searchResults');
+            const searchBox = document.getElementById('searchBox');
+            
+            if (e.target !== searchResults && 
+                e.target !== searchBox && 
+                !searchResults.contains(e.target)) {
+                searchResults.style.display = 'none';
+            }
+        });
+        
+        // Track article clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all article links
+            const articleLinks = document.querySelectorAll('.article-title a, .article .read-more');
+            
+            // Initialize click counts from localStorage or set to default values
+            let clickCounts = JSON.parse(localStorage.getItem('articleClickCounts')) || {};
+            
+            // Add click event listeners to all article links
+            articleLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Get the href attribute to identify the article
+                    const href = this.getAttribute('href');
+                    
+                    // Increment click count for this article
+                    clickCounts[href] = (clickCounts[href] || 0) + 1;
+                    
+                    // Save updated click counts to localStorage
+                    localStorage.setItem('articleClickCounts', JSON.stringify(clickCounts));
+                });
+            });
+        });
+        
+        function performSearch() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase().trim();
+            const searchResults = document.getElementById('searchResults');
+            const searchResultsList = document.getElementById('searchResultsList');
+            
+            // If search is empty, hide results
+            if (searchTerm === '') {
+                searchResults.style.display = 'none';
+                return;
+            }
+            
+            // Clear previous results
+            searchResultsList.innerHTML = '';
+            
+            // Search content data
+            const contentData = [
+                {
+                    title: "Dreaming of Spiders: Symbolism, Fear, and Emotional Insight",
+                    url: "journal/spider.html",
+                    description: "Dreams involving spiders are common and can evoke a range of emotions, from fear to fascination. These dreams often carry deep symbolic meanings.",
+                    keywords: ["spider", "web", "fear", "anxiety", "creativity", "patience", "feminine", "power", "manipulation", "symbolism"]
+                },
+                {
+                    title: "Why You Keep Dreaming About Flying",
+                    url: "journal/flying.html",
+                    description: "Flying in a dream often feels euphoric. There is weightlessness, freedom, a sense of rising above everything. But not all flying dreams are joyful.",
+                    keywords: ["flying", "dream", "freedom", "weightlessness", "euphoric", "transcend", "escape", "spirit", "shen", "control"]
+                },
+                {
+                    title: "What Does It Mean to Dream of a Snake?",
+                    url: "journal/snake.html",
+                    description: "A snake in a dream makes you pause. It moves without sound. It watches. It waits. In Eastern tradition, the snake is not evil.",
+                    keywords: ["snake", "dream", "transformation", "change", "hidden", "strength", "intelligence"]
+                },
+                {
+                    title: "Why You Keep Dreaming About Your Ex",
+                    url: "journal/ex.html",
+                    description: "An ex in a dream is never just a person — it's a story that never finished writing. These dreams can stir longing, regret, relief, or even guilt.",
+                    keywords: ["ex", "lover", "past", "relationship", "heart", "unfinished", "unresolved"]
+                },
+                {
+                    title: "Water in Dreams: Emotion, Flow, and Balance",
+                    url: "journal/water.html",
+                    description: "Water is one of the most ancient and universal dream symbols. It has no shape of its own — it becomes what contains it.",
+                    keywords: ["water", "emotion", "flow", "balance", "wisdom", "yield", "powerful"]
+                },
+                {
+                    title: "Why You Keep Dreaming Your Teeth Are Falling Out",
+                    url: "journal/teeth.html",
+                    description: "Teeth falling out in dreams is one of the most searched symbols in the world — and one of the most misunderstood.",
+                    keywords: ["teeth", "falling", "loss", "decay", "control", "aging", "exposure", "self-image"]
+                },
+                {
+                    title: "Why You Keep Dreaming About Being Chased",
+                    url: "journal/chase.html",
+                    description: "To be chased in a dream is to feel urgency without direction. Your body runs, your breath shortens, but often — you don't know what you're running from.",
+                    keywords: ["chase", "run", "pursue", "anxiety", "fear", "avoidance", "escape", "shadow"]
+                },
+                {
+                    title: "Why You Keep Dreaming About Falling",
+                    url: "journal/falling.html",
+                    description: "Falling in a dream is sudden, powerless, and unforgettable. It pulls you out of the sky, out of sleep, and sometimes — out of your sense of control.",
+                    keywords: ["falling", "sudden", "powerless", "unforgettable", "warning", "imbalance"]
+                },
+                {
+                    title: "Why You Keep Dreaming About Being Naked in Public",
+                    url: "journal/naked.html",
+                    description: "To be naked in a dream — especially in front of others — is to feel exposed. Not just without clothing, but without protection, without performance.",
+                    keywords: ["naked", "exposure", "nudity", "return", "essence"]
+                }
+            ];
+            
+            // Perform search
+            const results = contentData.filter(item => {
+                return (
+                    item.title.toLowerCase().includes(searchTerm) ||
+                    item.description.toLowerCase().includes(searchTerm) ||
+                    item.keywords.some(keyword => keyword.includes(searchTerm))
+                );
+            });
+            
+            // Display results
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const li = document.createElement('li');
+                    li.className = 'search-result-item';
+                    li.innerHTML = `
+                        <a href="${result.url}" target="_blank">${result.title}</a>
+                        <p>${result.description}</p>
+                    `;
+                    searchResultsList.appendChild(li);
+                });
+            } else {
+                searchResultsList.innerHTML = '<li class="no-results">No results found</li>';
+            }
+            
+            searchResults.style.display = 'block';
+        }
+    </script>
+</body>
+</html> 

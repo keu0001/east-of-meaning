@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreaming of Water: What It Means About Your Emotions</title>
+    <meta name="description" content="Dreams about water reveal your emotional state. Learn the meanings of calm, turbulent, rising, or falling water in your dreams.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Noto+Serif:wght@400;500;600&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/search.js" defer></script>
+    <style>
+        /* 整体页面优化 */
+        body {
+            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+            background-attachment: fixed;
+            background-size: 100% 100vh;
+            color: #f5f5f5; /* 略微调亮基础文字颜色 */
+            line-height: 1.8;
+        }
+        
+        /* 导航优化 */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        
+        .logo {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+        
+        /* 整体容器优化 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 3rem;
+            line-height: 1.6;
+        }
+        
+        /* 标题样式优化 */
+        header h1 {
+            font-size: 2.3rem;
+            line-height: 1.3;
+            margin-bottom: 2rem;
+            color: var(--gold);
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 引言部分优化 */
+        .intro {
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            font-family: 'Noto Serif', serif;
+            border-left: 3px solid var(--gold);
+            padding: 1.2rem 2rem;
+            background-color: rgba(15, 12, 41, 0.35);
+            border-radius: 0 8px 8px 0;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            display: block;
+        }
+        
+        .intro p {
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+            color: #f5f5f5;
+            letter-spacing: 0.2px;
+        }
+        
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .intro strong {
+            color: #ffda85; /* 略微柔和的金色 */
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+        
+        /* 主要内容部分 */
+        .two-column {
+            margin: 2.5rem 0;
+        }
+        
+        /* 章节标题优化 */
+        .annotations p {
+            font-size: 1.8rem;
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 0.8rem;
+            letter-spacing: 1px;
+        }
+        
+        .annotations p:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 1px;
+            background-color: var(--gold);
+        }
+        
+        /* 内容列表优化 */
+        .content {
+            background-color: rgba(15, 12, 41, 0.35);
+            padding: 2.5rem 3.5rem;
+            border-radius: 12px;
+            column-count: 3;
+            column-gap: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .content p {
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            padding-left: 1.3rem;
+            position: relative;
+            border-left: 2px solid rgba(212, 175, 55, 0.4);
+            break-inside: avoid;
+            letter-spacing: 0.2px;
+        }
+        
+        .content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .content strong {
+            color: #ffda85; /* 略微柔和的金色 */
+            font-weight: 500;
+            margin-right: 0.5rem;
+            display: inline-block;
+            font-size: 1.25rem;
+        }
+        
+        /* 结尾部分优化 */
+        .return {
+            margin-top: 3rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            padding-top: 2rem;
+            text-align: center;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .return p {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+            font-size: 1.25rem;
+            letter-spacing: 0.2px;
+        }
+        
+        .return p:first-child {
+            color: var(--gold);
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.8px;
+        }
+        
+        .return p:nth-child(2),
+        .return p:nth-child(3),
+        .return p:nth-child(4) {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .return p:nth-last-child(2),
+        .return p:last-child {
+            font-style: italic;
+            color: #ffda85; /* 略微柔和的金色 */
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 1400px) {
+            .content {
+                column-count: 2;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            .container {
+                padding: 1.5rem 2rem;
+            }
+            
+            .content {
+                padding: 2.2rem 2.8rem;
+                column-gap: 3rem;
+            }
+            
+            .content p {
+                font-size: 1.2rem;
+                margin-bottom: 1.2rem;
+                padding-left: 1.2rem;
+            }
+            
+            .content strong {
+                font-size: 1.25rem;
+            }
+            
+            .intro {
+                padding: 1.6rem 2.2rem;
+            }
+            
+            .intro p {
+                font-size: 1.25rem;
+            }
+            
+            .return p {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .content {
+                column-count: 2;
+                padding: 2rem 2.5rem;
+            }
+            
+            header h1 {
+                font-size: 2.1rem;
+            }
+            
+            .annotations p {
+                font-size: 1.8rem;
+                margin-bottom: 1.8rem;
+            }
+            
+            .content p {
+                font-size: 1.15rem;
+                line-height: 1.5;
+                margin-bottom: 1.1rem;
+            }
+            
+            .content strong {
+                font-size: 1.2rem;
+            }
+            
+            .return p:first-child {
+                font-size: 1.7rem;
+            }
+            
+            .intro {
+                padding: 1.2rem 1.8rem;
+                display: block;
+            }
+            
+            .intro p {
+                flex-basis: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+                line-height: 1.3;
+                margin-bottom: 1.5rem;
+            }
+            
+            .container {
+                padding: 1.2rem;
+            }
+            
+            .intro {
+                padding: 1.5rem 1.8rem;
+                margin-bottom: 2rem;
+            }
+            
+            .intro p {
+                font-size: 1.15rem;
+                margin-bottom: 0.7rem;
+            }
+            
+            .annotations p {
+                font-size: 1.6rem;
+                margin-bottom: 1.5rem;
+                padding-bottom: 0.6rem;
+            }
+            
+            .annotations p:after {
+                width: 80px;
+            }
+            
+            .content {
+                padding: 1.5rem 1.8rem;
+                column-count: 1;
+            }
+            
+            .content p {
+                font-size: 1.15rem;
+                line-height: 1.5;
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+            }
+            
+            .content strong {
+                font-size: 1.15rem;
+                margin-right: 0.4rem;
+            }
+            
+            .return {
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+            }
+            
+            .return p {
+                font-size: 1.15rem;
+                margin-bottom: 0.7rem;
+            }
+            
+            .return p:first-child {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .return p:nth-last-child(2),
+            .return p:last-child {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="logo">eastofmeaning</a>
+        <div class="nav-links">
+            <a href="../index.html#dream-oracle">INTERPRET</a>
+            <a href="../readings.html">READINGS</a>
+            <a href="../index.html#contact">CONTACT</a>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchBox" placeholder="Search dreams..." autocomplete="off">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <div class="search-results" id="searchResults">
+                <ul class="search-results-list" id="searchResultsList"></ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header>
+            <h1>🌊 Water in Dreams: Emotion, Flow, and Balance</h1>
+        </header>
+        
+        <div class="intro">
+            <p>Water is one of the most ancient and universal dream symbols.</p>
+            <p>It has no shape of its own — it becomes what contains it.</p>
+            <p>In dreams, water often reflects our <strong>inner emotional state</strong>: how we hold, release, resist, or move with what we feel.</p>
+            <p>In Eastern symbolism, water represents <strong>yin</strong>, receptivity, intuition, and balance.</p>
+            <p>In psychology, water is emotion, the unconscious, and the language of feeling without words.</p>
+            <p>How you meet the water in your dream tells how you're meeting yourself.</p>
+        </div>
+        
+        <div class="two-column">
+            <div class="annotations">
+                <p>🧭 The Many Forms of Water</p>
+            </div>
+            
+            <div class="content">
+                <p><strong>You see calm, clear water</strong> — Peaceful emotions, emotional clarity, or readiness to receive.</p>
+                <p><strong>You are drowning</strong> — You feel overwhelmed by emotion, or are resisting a necessary release.</p>
+                <p><strong>You float on water</strong> — You trust the process and are being carried by something larger.</p>
+                <p><strong>You are afraid of water</strong> — You fear letting go, or you fear what is hidden in your own depth.</p>
+                <p><strong>You walk into the ocean</strong> — You're entering something vast and emotional — with intention.</p>
+                <p><strong>A wave crashes over you</strong> — Sudden feelings, memories, or truths have surfaced.</p>
+                <p><strong>You are submerged but breathing</strong> — You're adapting to deep emotional states without fear.</p>
+                <p><strong>You drink water</strong> — You're seeking nourishment — physically, emotionally, or spiritually.</p>
+                <p><strong>You spill water</strong> — A missed opportunity, or feelings wasted or not held carefully.</p>
+                <p><strong>Water floods your home</strong> — Emotional overwhelm affecting your sense of safety or inner life.</p>
+                <p><strong>You see a waterfall</strong> — A powerful emotional release is near, or already in motion.</p>
+                <p><strong>You stand in the rain</strong> — A cleansing, a quiet grief, or a soft form of healing.</p>
+                <p><strong>You see muddy water</strong> — Confusion or unresolved emotions are clouding your clarity.</p>
+                <p><strong>You cross a river</strong> — A rite of passage, a shift from one emotional stage to another.</p>
+                <p><strong>You cannot find water</strong> — Emotional dryness, depletion, or the need to reconnect inward.</p>
+                <p><strong>You wash your hands or face</strong> — A desire to renew, release guilt, or restore self-perception.</p>
+                <p><strong>You freeze or boil water</strong> — You're controlling emotion: cooling it down or intensifying it.</p>
+                <p><strong>You fall into water unexpectedly</strong> — A surprise emotional event, or repressed feelings rising up.</p>
+                <p><strong>Water turns into something else</strong> — A shift in emotional meaning, or symbolic transformation.</p>
+                <p><strong>You offer water to someone</strong> — You are emotionally available, or extending empathy outward.</p>
+            </div>
+        </div>
+        
+        <div class="return">
+            <p>☁ One Last Thought</p>
+            <p>Water dreams don't ask you to control. They ask you to notice.</p>
+            <p>Whether calm or wild, clear or hidden — the water carries <strong>truth</strong>.</p>
+            <p>And it always points back to the same place: <strong>within</strong>.</p>
+            <p>✨ If this brought stillness or insight, return to the Oracle.</p>
+            <p>🍵 Or offer me tea, and let emotion become presence.</p>
+        </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="support">
+                <p>If this insight spoke to you, you may offer me tea 🍵</p>
+                    <a href="https://www.buymeacoffee.com/eastofmeaning" class="buymeacoffee">
+                    Buy Me a Tea
+                    </a>
+                </div>
+                <div class="contact-area">
+                    <p>Want to share a dream or simply speak?<br>
+                    Write me anytime: <a href="mailto:eastofmeaning@gmail.com">eastofmeaning@gmail.com</a></p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html> 
